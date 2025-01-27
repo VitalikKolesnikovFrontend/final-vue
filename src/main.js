@@ -1,4 +1,10 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 
-createApp(App).mount("#app");
+import { Button } from "primevue";
+import PrimeVue from "primevue/config";
+
+const app = createApp(App);
+app.mount("#app");
+app.use(PrimeVue);
+app.component(Button);
