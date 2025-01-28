@@ -22,22 +22,36 @@ const closeModal = () => {
       v-model:visible="localVisible"
       modal
       :closable="false"
-      header="Edit Profile"
+      header="Registration/Authorization"
       :style="{ width: '25rem' }"
+      class="custom-dialog"
     >
-      <span class="text-surface-500 dark:text-surface-400 block mb-8"
-        >Update your information.</span
-      >
       <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Username</label>
+        <label style="margin: 10px" for="username" class="font-semibold w-24"
+          >Login</label
+        >
         <InputText id="username" class="flex-auto" autocomplete="off" />
       </div>
+      <div class="flex items-center gap-4 mb-4">
+        <label style="margin: 15px" for="username" class="font-semibold w-24"
+          >Pass</label
+        >
+        <InputText
+          type="password"
+          id="password"
+          class="flex-auto"
+          autocomplete="off"
+        />
+      </div>
       <div class="flex items-center gap-4 mb-8">
-        <label for="email" class="font-semibold w-24">Email</label>
+        <label style="margin: 10px" for="email" class="font-semibold w-24"
+          >Email</label
+        >
         <InputText id="email" class="flex-auto" autocomplete="off" />
       </div>
       <div class="flex justify-end gap-2">
         <Button
+          style="margin: 10px"
           type="button"
           label="Cancel"
           severity="secondary"
@@ -48,3 +62,5 @@ const closeModal = () => {
     </Dialog>
   </div>
 </template>
+
+<style scoped></style>

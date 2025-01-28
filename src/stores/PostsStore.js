@@ -19,6 +19,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "04/02/2023 13:25:21",
         updatedAt: "14/03/2023 17:22:20",
         userId: 1,
+        author: "User1",
       },
       {
         id: 2,
@@ -37,6 +38,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "25/12/2022 13:10:07",
         updatedAt: "19/01/2023 08:25:17",
         userId: 2,
+        author: "User1",
       },
       {
         id: 3,
@@ -54,6 +56,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "06/02/2023 10:19:53",
         updatedAt: "16/01/2023 07:25:47",
         userId: 3,
+        author: "User1",
       },
       {
         id: 4,
@@ -71,6 +74,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "13/01/2023 15:18:26",
         updatedAt: "23/01/2023 10:53:55",
         userId: 4,
+        author: "User2",
       },
       {
         id: 5,
@@ -88,6 +92,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "22/12/2022 14:53:38",
         updatedAt: "16/01/2023 21:56:46",
         userId: 5,
+        author: "User2",
       },
       {
         id: 6,
@@ -106,6 +111,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "31/01/2023 14:09:34",
         updatedAt: "11/03/2023 18:50:19",
         userId: 6,
+        author: "User3",
       },
       {
         id: 7,
@@ -123,6 +129,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "10/11/2022 19:23:45",
         updatedAt: "08/02/2023 22:42:11",
         userId: 7,
+        author: "User1",
       },
       {
         id: 8,
@@ -141,6 +148,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "11/12/2022 20:02:05",
         updatedAt: "11/03/2023 12:50:47",
         userId: 8,
+        author: "User4",
       },
       {
         id: 9,
@@ -159,6 +167,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "31/01/2023 11:41:09",
         updatedAt: "19/03/2023 10:09:17",
         userId: 9,
+        author: "User2",
       },
       {
         id: 10,
@@ -177,6 +186,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "22/11/2022 18:56:23",
         updatedAt: "30/01/2023 18:50:17",
         userId: 10,
+        author: "User5",
       },
       {
         id: 11,
@@ -194,6 +204,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "11/02/2023 14:52:19",
         updatedAt: "27/01/2023 10:32:45",
         userId: 11,
+        author: "User3",
       },
       {
         id: 12,
@@ -211,6 +222,7 @@ export const usePostsStore = defineStore("postsStore", {
         publishedAt: "19/01/2023 16:25:41",
         updatedAt: "02/02/2023 12:46:28",
         userId: 12,
+        author: "User4",
       },
     ],
   }),

@@ -1,18 +1,26 @@
 <script setup>
-import { ref } from "vue";
+// import { ref } from "vue";
 import AppModal from "./AppModal.vue";
+import { useModalStore } from "@/stores/ModalStore";
 
-const visible = ref(false);
+// const visible = ref(false);
+const store = useModalStore();
+console.log(store.modal);
+
+//----------------------------
 </script>
 <template>
   <div class="app-header">
     <h1 class="header-title">Vue News App</h1>
     <div class="header-auth">
-      <Button @click="visible = true" class="header-button">SIGN UP</Button>
-      <Button @click="visible = true" class="header-button">SIGN IN</Button>
+      <Button @click="store.modal = true" class="header-button">SIGN UP</Button>
+      <Button @click="store.modal = true" class="header-button">SIGN IN</Button>
     </div>
   </div>
-  <AppModal :visible="visible" @update:visible="(value) => (visible = value)" />
+  <AppModal
+    :visible="store.modal"
+    @update:visible="(value) => (store.modal = value)"
+  />
 </template>
 
 <style scoped>

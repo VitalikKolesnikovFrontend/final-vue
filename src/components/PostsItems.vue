@@ -12,6 +12,7 @@ const store = usePostsStore();
         :title="item.title"
         :content="item.content"
         :image="item.image"
+        :author="item.author"
       />
     </li>
   </div>
