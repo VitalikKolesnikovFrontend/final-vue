@@ -1,9 +1,27 @@
+<script setup>
+import { ref, watch } from "vue";
+
+const props = defineProps({ visible: Boolean });
+const localVisible = ref(props.visible);
+
+watch(
+  () => props.visible,
+  (newValue) => (localVisible.value = newValue)
+);
+
+const emit = defineEmits(["update:visible"]);
+
+const closeModal = () => {
+  localVisible.value = false;
+  emit("update:visible", false);
+};
+</script>
 <template>
   <div class="card flex justify-center">
-    <Button label="Show" @click="visible = true" />
     <Dialog
-      v-model:visible="visible"
+      v-model:visible="localVisible"
       modal
+      :closable="false"
       header="Edit Profile"
       :style="{ width: '25rem' }"
     >
@@ -23,16 +41,10 @@
           type="button"
           label="Cancel"
           severity="secondary"
-          @click="visible = false"
+          @click="closeModal"
         ></Button>
-        <Button type="button" label="Save" @click="visible = false"></Button>
+        <Button type="button" label="Save" @click="closeModal"></Button>
       </div>
     </Dialog>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const visible = ref(false);
-</script>

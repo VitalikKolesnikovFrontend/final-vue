@@ -1,12 +1,18 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import AppModal from "./AppModal.vue";
+
+const visible = ref(false);
+</script>
 <template>
   <div class="app-header">
     <h1 class="header-title">Vue News App</h1>
     <div class="header-auth">
-      <button class="header-button">SIGN UP</button>
-      <button class="header-button">SIGN IN</button>
+      <Button @click="visible = true" class="header-button">SIGN UP</Button>
+      <Button @click="visible = true" class="header-button">SIGN IN</Button>
     </div>
   </div>
+  <AppModal :visible="visible" @update:visible="(value) => (visible = value)" />
 </template>
 
 <style scoped>
